@@ -29,7 +29,7 @@ export default class Index extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => console.log('yay'))
+      .then(() => navigate(form.getAttribute('action'))
       .catch((error) => alert(error))
   }
 
@@ -53,7 +53,7 @@ export default class Index extends React.Component {
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={this.handleChange} />
+                    <input name="bot-field" />
                   </label>
                 </div>
                 <div className="field">
